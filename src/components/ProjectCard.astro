@@ -1,0 +1,14 @@
+---
+interface Props {
+    img: string;
+    desc: string;
+}
+const { img, desc } = Astro.props;
+---
+
+<div
+    transition:animate="fade"
+    class="flex w-full h-full justify-center items-center border rounded-xl"
+>
+    <img src=`${img}` alt=`This is my project named: ${desc}` />
+</div>

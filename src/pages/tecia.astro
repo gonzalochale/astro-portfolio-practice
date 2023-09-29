@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../globals.css";
+import ProjectCard from "@/components/ProjectCard.astro";
+import { Button } from "@/components/ui/button";
+---
+
+<Layout title="Gonzalo Chalé">
+    <main
+        class="flex flex-col w-4/5 bg-secondary h-auto max-lg:w-full justify-start items-center p-5 gap-3"
+    >
+        <div class="w-full flex max-lg:justify-center items-center">
+            <a href="/">
+                <Button size="sm" variant="outline" className="gap-1">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-arrow-back"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        fill="none"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"
+                        ></path>
+                        <path d="M9 11l-4 4l4 4m-4 -4h11a4 4 0 0 0 0 -8h-1"
+                        ></path>
+                    </svg>
+                     Regresar
+                </Button>
+            </a>
+        </div>
+        <div class="w-3/4 flex justify-center items-center border rounded">
+            <ProjectCard img="tecia.png" desc="tecia" />
+        </div>
+    </main>
+</Layout>

@@ -5,9 +5,8 @@ interface Props {
 
 const { title } = Astro.props;
 
-// Supports weights 100-900
 import "@fontsource-variable/inter";
-
+import { ViewTransitions } from "astro:transitions";
 import MobileNav from "@/components/MobileNav.astro";
 import SideBar from "@/components/SideBar.astro";
 ---
@@ -21,6 +20,7 @@ import SideBar from "@/components/SideBar.astro";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body class="h-auto w-full flex flex-wrap">
 		<SideBar />
