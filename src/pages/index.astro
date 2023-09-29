@@ -1,8 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../globals.css";
+import SideBar from "@/components/SideBar.astro";
+import Dashboard from "@/components/Dashboard.astro";
 ---
 
 <Layout title="Gonzalo Chalé">
-	<main class="h-full w-full"></main>
+    <SideBar />
+    <Dashboard />
 </Layout>

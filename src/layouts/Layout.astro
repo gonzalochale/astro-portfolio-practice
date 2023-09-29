@@ -5,11 +5,12 @@ interface Props {
 
 const { title } = Astro.props;
 
-import Nav from "../components/Nav.astro";
+// Supports weights 100-900
+import "@fontsource-variable/inter";
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -18,8 +19,7 @@ import Nav from "../components/Nav.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="h-screen flex flex-col justify-center items-center">
-		<Nav />
+	<body class="h-auto w-full flex flex-wrap">
 		<slot />
 	</body>
 </html>
