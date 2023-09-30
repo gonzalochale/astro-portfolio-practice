@@ -2,13 +2,21 @@
 interface Props {
     img: string;
     desc: string;
+    href: string;
 }
-const { img, desc } = Astro.props;
+const { img, desc, href } = Astro.props;
 ---
 
-<div
-    transition:animate="fade"
-    class="flex w-full h-full justify-center items-center border rounded-xl"
->
-    <img src=`${img}` alt=`This is my project named: ${desc}` />
+<div class="flex w-full h-full justify-center items-center rounded">
+    <div
+        class="flex w-full h-full justify-center items-center rounded max-lg:items-start"
+    >
+        <a href={href}>
+            <img
+                src=`${img}`
+                alt=`This is my project named: ${desc}`
+                class="rounded flex"
+            />
+        </a>
+    </div>
 </div>

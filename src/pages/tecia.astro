@@ -5,11 +5,11 @@ import ProjectCard from "@/components/ProjectCard.astro";
 import { Button } from "@/components/ui/button";
 ---
 
-<Layout title="Gonzalo Chalé">
+<Layout title="Portfolio">
     <main
-        class="flex flex-col w-4/5 bg-secondary h-auto max-lg:w-full justify-start items-center p-5 gap-3"
+        class="flex flex-col w-full lg:w-4/5 bg-secondary h-auto justify-center items-center p-10 gap-3"
     >
-        <div class="w-full flex max-lg:justify-center items-center">
+        <div class="w-full flex items-center justify-start">
             <a href="/">
                 <Button size="sm" variant="outline" className="gap-1">
                     <svg
@@ -33,8 +33,21 @@ import { Button } from "@/components/ui/button";
                 </Button>
             </a>
         </div>
-        <div class="w-3/4 flex justify-center items-center border rounded">
-            <ProjectCard img="tecia.png" desc="tecia" />
+        <div class="flex flex-col justify-center items-start w-full gap-3">
+            <span
+                class="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl"
+                >Nombre</span
+            >
+            <p
+                class="scroll-m-20 text-2xl font-semibold tracking-tight text-start"
+            >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+                in
+            </p>
+        </div>
+
+        <div class="w-full flex justify-center items-center">
+            <ProjectCard href="#" img="tecia.png" desc="project" />
         </div>
     </main>
 </Layout>
